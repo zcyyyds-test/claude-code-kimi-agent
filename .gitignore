@@ -4,3 +4,6 @@
 *.swp
 *.swo
 *~
+
+# demo generation artifacts (keep output, not the driver script)
+assets/_demo_runner.sh

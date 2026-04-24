@@ -4,6 +4,10 @@
 
 A [Claude Code](https://docs.claude.com/en/docs/claude-code) subagent that delegates self-contained exploration / code-reading / debugging tasks to the local [Kimi CLI](https://github.com/MoonshotAI/kimi-cli) (Moonshot AI). Read-only by default — enforced at Kimi's tool-dispatch layer, not by prompt-level trust.
 
+![demo](assets/demo.gif)
+
+*Demo: kimi-agent explores a tiny mock repo via `Glob`, then refuses a write request because `WriteFile` / `StrReplaceFile` / `Shell` are excluded in the YAML. Verify on disk — the file was never created.*
+
 ## Why
 
 Claude Code can already delegate to third-party CLIs — the `codex-rescue` subagent does this for OpenAI's Codex CLI. This project gives you the same pattern for **Kimi**, with a different training lineage (Moonshot, not OpenAI) for a genuinely independent second opinion, and with a locked-down default that can only read.

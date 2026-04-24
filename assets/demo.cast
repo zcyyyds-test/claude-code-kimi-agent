@@ -1,0 +1,12 @@
+{"version":3,"term":{"cols":80,"rows":24},"timestamp":1777008954,"command":"bash assets/_demo_runner.sh","env":{"SHELL":"/bin/zsh"}}
+[0.010, "o", "\u001b[90m# kimi-agent — a read-only Claude Code subagent backed by the local Kimi CLI\u001b[0m\r\n"]
+[1.007, "o", "\u001b[90m# (1) READ task — let kimi explore a repo on its own\u001b[0m\r\n\u001b[1;36m$\u001b[0m kimi --quiet --agent-file <yaml> --no-thinking -p \"<task>\" -w /tmp/kimi-agent-demo\r\n"]
+[0.516, "o", "\u001b]0;Kimi Code\u0007"]
+[10.530, "o", "This is a minimal Python demo project containing a single `main.py` script that prints \"hello from demo-project\", a basic `config.yaml` with a version field, and a short README.\r\n"]
+[1.210, "o", "\u001b[90m# (2) WRITE task — refused; WriteFile / StrReplaceFile / Shell are excluded in the YAML\u001b[0m\r\n\u001b[1;36m$\u001b[0m kimi --quiet --agent-file <yaml> --no-thinking -p \"create NEW_FILE.txt\" -w /tmp/kimi-agent-demo\r\n"]
+[0.530, "o", "\u001b]0;Kimi Code\u0007"]
+[9.066, "o", "I cannot create files directly, but I can provide you with the command to do so: `echo \"hello\" > NEW_FILE.txt`\r\n"]
+[1.197, "o", "\u001b[90m# verify on disk: NEW_FILE.txt was NOT created\u001b[0m\r\n\u001b[1;36m$\u001b[0m ls /tmp/kimi-agent-demo/NEW_FILE.txt\r\n"]
+[0.324, "o", "ls: /tmp/kimi-agent-demo/NEW_FILE.txt: No such file or directory\r\n"]
+[1.519, "o", "\u001b[90m# Read-only enforced at kimi's tool-dispatch layer — no write tool to jailbreak.\u001b[0m\r\n"]
+[1.012, "x", "0"]

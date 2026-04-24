@@ -4,6 +4,10 @@
 
 一个 [Claude Code](https://docs.claude.com/en/docs/claude-code) subagent，把"自主探索 / 读代码 / debug"类任务委派给本地的 [Kimi CLI](https://github.com/MoonshotAI/kimi-cli)（Moonshot AI）执行。**默认只读**——约束落在 Kimi 的工具分发层，不依赖 prompt 层信任。
 
+![demo](assets/demo.gif)
+
+*演示：kimi-agent 先用 `Glob` 工具自己探索一个 mock 仓库；接着尝试写文件被明确拒绝（因为 `WriteFile` / `StrReplaceFile` / `Shell` 都在 YAML 里被 exclude 了）；最后在磁盘上确认文件从未被创建。*
+
 ## 为什么要做这个
 
 Claude Code 本来就支持把任务丢给第三方 CLI —— OpenAI 官方的 `codex-rescue` subagent 就是这样把任务转给 Codex CLI。这个项目把同一套思路复刻到 **Kimi** 上：训练谱系不同（Moonshot，不是 OpenAI），可以得到真正独立的第三方视角；默认锁成只读，不会乱改仓库。
