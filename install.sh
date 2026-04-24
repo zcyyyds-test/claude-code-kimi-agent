@@ -16,6 +16,7 @@ echo "→ checking dependencies"
 if ! command -v kimi >/dev/null 2>&1; then
   echo "  ✗ kimi CLI not found on PATH"
   echo "    install from https://github.com/MoonshotAI/kimi-cli then run 'kimi login'"
+  echo "    note: Kimi CLI requires an active Kimi subscription"
   exit 1
 fi
 echo "  ✓ kimi: $(command -v kimi)"

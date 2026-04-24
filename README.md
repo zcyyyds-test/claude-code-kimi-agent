@@ -38,7 +38,7 @@ Kimi sees only `ReadFile` / `ReadMediaFile` / `Glob` / `Grep` (and web-search / 
 ## Requirements
 
 - [Claude Code](https://docs.claude.com/en/docs/claude-code) (the CLI / IDE extension)
-- [Kimi CLI](https://github.com/MoonshotAI/kimi-cli) (installed, authenticated via `kimi login`)
+- [Kimi CLI](https://github.com/MoonshotAI/kimi-cli) — **requires an active Kimi subscription**. Install the CLI, then run `kimi login` once to authenticate. Without a valid subscription this subagent cannot produce output.
 - `gtimeout` (macOS: `brew install coreutils`) **or** `timeout` (Linux: usually in coreutils by default)
 - Bash (macOS/Linux default shell works)
 

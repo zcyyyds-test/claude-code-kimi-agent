@@ -40,7 +40,7 @@ Kimi 在这个 session 里可用的工具只剩 `ReadFile` / `ReadMediaFile` / `
 ## 运行环境要求
 
 - [Claude Code](https://docs.claude.com/en/docs/claude-code)（CLI / IDE 插件均可）
-- [Kimi CLI](https://github.com/MoonshotAI/kimi-cli)（已安装并通过 `kimi login` 登录）
+- [Kimi CLI](https://github.com/MoonshotAI/kimi-cli) —— **需要有效的 Kimi 订阅**。先装 CLI，然后执行一次 `kimi login` 完成登录。没有有效订阅的话，本 subagent 跑不出结果。
 - `gtimeout`（macOS：`brew install coreutils`）**或** `timeout`（Linux 一般自带）
 - Bash（macOS / Linux 默认 shell 即可）
 
