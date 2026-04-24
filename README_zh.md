@@ -18,8 +18,6 @@ Claude Code 本来就支持把任务丢给第三方 CLI —— OpenAI 官方的 
 |---|---|:---:|:---:|
 | `codex-rescue`（OpenAI）        | 本地 CLI | ✅ | ✅（可写）|
 | **`kimi-agent`（本项目）**       | **本地 CLI** | **✅** | **❌（OS 级只读）**|
-| Kimi MCP（`kimi_analyze`）      | 远程 API | ❌（需要 prompt 带内容）| ❌ |
-| DeepSeek MCP（`deepseek_ask`）  | 远程 API | ❌（需要 prompt 带内容）| ❌ |
 
 适用场景：你希望 **Kimi 自己去探索代码仓库**（而不是你把代码塞进 prompt 喂给它），但又**不想它改任何东西**。
 

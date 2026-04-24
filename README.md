@@ -18,8 +18,6 @@ Where each tool fits:
 |---|---|:---:|:---:|
 | `codex-rescue` (OpenAI)       | local CLI   | ✅ | ✅ (can write) |
 | **`kimi-agent` (this repo)**  | **local CLI** | **✅** | **❌ (OS-level read-only)** |
-| Kimi MCP (`kimi_analyze`)     | remote API  | ❌ (prompt must carry content) | ❌ |
-| DeepSeek MCP (`deepseek_ask`) | remote API  | ❌ (prompt must carry content) | ❌ |
 
 Use `kimi-agent` when you want Kimi to explore the repo itself — instead of you pre-loading context into a prompt — but you don't want it to mutate anything.
 
